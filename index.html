@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akalya V | Software & Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Akalya V - Final-Year B.Sc. Computer Science Student, Aspiring Software Developer & Web Developer." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Cinematic Scroll Animation Canvas -->
+  <div id="canvas-fixed-container" aria-hidden="true">
+    <canvas id="animation-canvas"></canvas>
+    <div class="canvas-ambient-glow left"></div>
+    <div class="canvas-ambient-glow right"></div>
+    <div class="canvas-overlay-scrim"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-avatar-dot"></span>
+        <span class="brand-name">AKALYA <span class="brand-highlight">V</span></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link nav-btn-contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Overlay -->
+  <main class="content-overlay">
+
+    <!-- 1. HOME / HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-status-pill">
+          <span class="status-pulse-dot"></span>
+          <span>Available for Entry-Level Opportunities</span>
+        </div>
+
+        <h1 class="hero-name">
+          AKALYA <span class="gradient-text">V</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Final-Year B.Sc. Computer Science Student
+        </p>
+
+        <p class="hero-tagline">
+          Aspiring Software Developer <span class="divider-dot">•</span> Web Developer
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-actions">
+          <a href="#resume" class="btn btn-primary" id="btn-hero-resume">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            View My Resume
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            Explore Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Contact Me
+          </a>
+        </div>
+
+        <!-- Small Animated Text Pill Ticker -->
+        <div class="hero-skills-ticker">
+          <div class="ticker-badge">
+            <span class="sparkle-icon">✨</span>
+            <span class="ticker-text">Java <span class="bullet">•</span> Web Development <span class="bullet">•</span> Git <span class="bullet">•</span> GitHub <span class="bullet">•</span> AI &amp; Emerging Technologies</span>
+          </div>
+        </div>
+
+        <!-- Scroll Down Cue -->
+        <a href="#about" class="scroll-cue" aria-label="Scroll down to About section">
+          <span class="scroll-mouse">
+            <span class="scroll-wheel"></span>
+          </span>
+          <span class="scroll-text">Scroll to explore</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">GET TO KNOW ME</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Bio Card -->
+          <div class="glass-card about-bio-card">
+            <div class="card-glow-accent"></div>
+            <p class="about-lead">
+              I am a final-year <strong class="text-white">B.Sc. Computer Science</strong> student with an academic score of <span class="highlight-badge">80%</span>.
+            </p>
+            <p class="about-desc">
+              I have a strong interest in software development and web technologies. I enjoy solving problems, learning new technologies, and building practical projects. I am looking for an entry-level opportunity where I can apply my technical skills and contribute to a growing organization.
+            </p>
+          </div>
+
+          <!-- Animated Highlight Cards -->
+          <div class="about-cards-column">
+            <div class="glass-card animated-mini-card education-mini-card">
+              <div class="mini-card-icon">🎓</div>
+              <div class="mini-card-content">
+                <span class="mini-card-label">Education</span>
+                <h3 class="mini-card-title">B.Sc. Computer Science</h3>
+                <span class="mini-card-sub">Final-Year Undergraduate</span>
+              </div>
+            </div>
+
+            <div class="glass-card animated-mini-card interest-mini-card">
+              <div class="mini-card-icon">💡</div>
+              <div class="mini-card-content">
+                <span class="mini-card-label">Interest</span>
+                <h3 class="mini-card-title">Software Development &amp; Web Technologies</h3>
+                <span class="mini-card-sub">Modern Web • Clean Code • Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EDUCATION SECTION -->
+    <section id="education" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">ACADEMIC BACKGROUND</span>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        </div>
+
+        <div class="education-card-wrapper">
+          <div class="glass-card education-card">
+            <div class="education-header">
+              <div class="education-badge-icon">🏛️</div>
+              <div class="education-meta">
+                <span class="education-level-tag">UNDERGRADUATE DEGREE</span>
+                <h3 class="education-degree">B.Sc. Computer Science</h3>
+                <h4 class="education-college">Sri Amaraavathi College of Arts and Science</h4>
+              </div>
+              <div class="score-badge-box">
+                <span class="score-label">Academic Score</span>
+                <span class="score-value">80%</span>
+              </div>
+            </div>
+
+            <div class="education-footer">
+              <div class="edu-detail-pill">
+                <span class="pill-dot"></span>
+                <span>Focus: Core Computing, Data Structures &amp; Web Engineering</span>
+              </div>
+              <div class="edu-detail-pill">
+                <span class="pill-dot"></span>
+                <span>Final-Year Graduation: 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TECHNICAL SKILLS & SOFT SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">EXPERTISE &amp; TOOLS</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        </div>
+
+        <!-- Technical Skills Grid -->
+        <div class="skills-grid">
+          <!-- Java -->
+          <div class="glass-card skill-card" data-level="Basics">
+            <div class="skill-header">
+              <div class="skill-icon-wrap java-icon">☕</div>
+              <span class="skill-level-badge level-basics">Basics</span>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 55%;"></div>
+            </div>
+          </div>
+
+          <!-- Git -->
+          <div class="glass-card skill-card" data-level="Intermediate">
+            <div class="skill-header">
+              <div class="skill-icon-wrap git-icon">🌿</div>
+              <span class="skill-level-badge level-intermediate">Intermediate</span>
+            </div>
+            <h3 class="skill-name">Git</h3>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <div class="glass-card skill-card" data-level="Intermediate">
+            <div class="skill-header">
+              <div class="skill-icon-wrap github-icon">🐙</div>
+              <span class="skill-level-badge level-intermediate">Intermediate</span>
+            </div>
+            <h3 class="skill-name">GitHub</h3>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <!-- VS Code -->
+          <div class="glass-card skill-card" data-level="Intermediate">
+            <div class="skill-header">
+              <div class="skill-icon-wrap vscode-icon">💻</div>
+              <span class="skill-level-badge level-intermediate">Intermediate</span>
+            </div>
+            <h3 class="skill-name">VS Code</h3>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Antigravity -->
+          <div class="glass-card skill-card" data-level="Intermediate">
+            <div class="skill-header">
+              <div class="skill-icon-wrap antigravity-icon">🚀</div>
+              <span class="skill-level-badge level-intermediate">Intermediate</span>
+            </div>
+            <h3 class="skill-name">Antigravity</h3>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+
+          <!-- PowerPoint -->
+          <div class="glass-card skill-card" data-level="Intermediate">
+            <div class="skill-header">
+              <div class="skill-icon-wrap ppt-icon">📊</div>
+              <span class="skill-level-badge level-intermediate">Intermediate</span>
+            </div>
+            <h3 class="skill-name">PowerPoint</h3>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills Subsection -->
+        <div class="soft-skills-wrapper">
+          <h3 class="subsection-title">
+            <span class="title-decor">🤝</span> Soft Skills
+          </h3>
+          <div class="soft-skills-grid">
+            <div class="glass-card soft-skill-card">
+              <span class="soft-skill-icon">🧩</span>
+              <span class="soft-skill-label">Problem Solving</span>
+            </div>
+            <div class="glass-card soft-skill-card">
+              <span class="soft-skill-icon">💬</span>
+              <span class="soft-skill-label">Communication</span>
+            </div>
+            <div class="glass-card soft-skill-card">
+              <span class="soft-skill-icon">👥</span>
+              <span class="soft-skill-label">Teamwork &amp; Collaboration</span>
+            </div>
+            <div class="glass-card soft-skill-card">
+              <span class="soft-skill-icon">⏱️</span>
+              <span class="soft-skill-label">Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">PRACTICAL WORK</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="projects-container">
+          <div class="glass-card project-card featured-project">
+            <div class="project-badge-row">
+              <span class="status-live-pill">
+                <span class="live-pulse"></span> Status: Live
+              </span>
+              <span class="host-pill">Hosted on Netlify</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-icon-headline">
+                <span class="project-avatar">💄</span>
+                <div>
+                  <h3 class="project-title">Poovi Makeup Artist Website</h3>
+                  <div class="tech-tags-list">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="project-desc">
+                Created a responsive business website with services, portfolio, contact, and booking sections. Designed for seamless client engagement, appointment inquiry, and mobile-friendly portfolio showcasing.
+              </p>
+
+              <div class="project-meta-box">
+                <div class="meta-item">
+                  <span class="meta-label">Domain</span>
+                  <span class="meta-val">Beauty &amp; Bridal Services</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Deployment</span>
+                  <span class="meta-val">Netlify Production</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://poovi-makeup.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-project-live">
+                  <span>Visit Live Website</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://poovi-makeup.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <span>View Page</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">CREDENTIALS</span>
+          <h2 class="section-title">Verified <span class="gradient-text">Certifications</span></h2>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Gemini Certified Student -->
+          <div class="glass-card cert-card">
+            <div class="cert-header">
+              <div class="cert-icon-badge google-cert-badge">✨</div>
+              <span class="cert-date">August 2026</span>
+            </div>
+            <h3 class="cert-title">Gemini Certified Student</h3>
+            <p class="cert-issuer">University Google for Education</p>
+            <div class="cert-tag">Artificial Intelligence • Google Education</div>
+          </div>
+
+          <!-- Intel AI for All -->
+          <div class="glass-card cert-card">
+            <div class="cert-header">
+              <div class="cert-icon-badge intel-cert-badge">🤖</div>
+              <span class="cert-date">August 2026</span>
+            </div>
+            <h3 class="cert-title">Intel AI for All</h3>
+            <p class="cert-subtitle">AI Aware &amp; AI Appreciate</p>
+            <p class="cert-issuer">Intel &amp; Government of India</p>
+            <div class="cert-tag">AI Literacy • National Initiative</div>
+          </div>
+
+          <!-- Full Stack Development Certificate -->
+          <div class="glass-card cert-card">
+            <div class="cert-header">
+              <div class="cert-icon-badge fullstack-cert-badge">🌐</div>
+              <span class="cert-date">Certified</span>
+            </div>
+            <h3 class="cert-title">Full Stack Development Certificate</h3>
+            <p class="cert-issuer">Web &amp; Software Engineering</p>
+            <div class="cert-tag">Frontend • Backend • JavaScript</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">HONORS &amp; SPORTS</span>
+          <h2 class="section-title">Achievements <span class="trophy-glow">🏆</span></h2>
+        </div>
+
+        <div class="trophy-hero-card glass-card">
+          <div class="trophy-glow-halo"></div>
+          
+          <div class="trophy-display">
+            <div class="trophy-3d-box">
+              <span class="trophy-big-icon">🏆</span>
+            </div>
+          </div>
+
+          <div class="trophy-content">
+            <span class="achievement-pill">DISTRICT CHAMPIONSHIP</span>
+            <h3 class="tournament-title">CM Trophy Hockey Tournament</h3>
+            <div class="winner-headline">
+              <span class="cup-icon">🥇</span>
+              <span class="winner-text">Karur District Winner</span>
+            </div>
+            <p class="tournament-sub">Junior-Level Hockey Tournament</p>
+            <p class="achievement-desc">
+              Proudly represented Karur District at the district level, demonstrating athletic excellence, resilience, and high-performance team leadership.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. RESUME SECTION -->
+    <section id="resume" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">CURRICULUM VITAE</span>
+          <h2 class="section-title">Professional <span class="gradient-text">Resume</span></h2>
+        </div>
+
+        <div class="resume-card-wrapper">
+          <div class="glass-card resume-glass-card">
+            <div class="resume-card-header">
+              <div class="resume-avatar-badge">AV</div>
+              <div>
+                <h3 class="resume-card-name">AKALYA V</h3>
+                <p class="resume-card-role">Final-Year B.Sc. Computer Science Student</p>
+                <p class="resume-card-sub">Sri Amaraavathi College of Arts and Science • Academic Score: 80%</p>
+              </div>
+            </div>
+
+            <div class="resume-highlights-grid">
+              <div class="resume-highlight-item">
+                <span class="highlight-bullet">⚡</span>
+                <span><strong>Specialization:</strong> Software &amp; Web Development</span>
+              </div>
+              <div class="resume-highlight-item">
+                <span class="highlight-bullet">🚀</span>
+                <span><strong>Key Project:</strong> Poovi Makeup Artist Website (Live on Netlify)</span>
+              </div>
+              <div class="resume-highlight-item">
+                <span class="highlight-bullet">📜</span>
+                <span><strong>Credentials:</strong> Gemini Certified Student &amp; Intel AI for All</span>
+              </div>
+              <div class="resume-highlight-item">
+                <span class="highlight-bullet">🏆</span>
+                <span><strong>Sports Leadership:</strong> Karur District Winner (CM Trophy Hockey)</span>
+              </div>
+            </div>
+
+            <!-- Resume Action Buttons -->
+            <div class="resume-btn-row">
+              <button class="btn btn-primary" id="btn-open-resume-modal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                VIEW RESUME
+              </button>
+              <button class="btn btn-secondary" id="btn-download-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                DOWNLOAD RESUME
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtext">Open to entry-level software developer, web developer, and internship roles.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Email Card -->
+          <a href="mailto:akalyav8@gmail.com" class="glass-card contact-card">
+            <div class="contact-icon-bubble email-bubble">📧</div>
+            <div class="contact-card-info">
+              <span class="contact-type">Email</span>
+              <strong class="contact-value">akalyav8@gmail.com</strong>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- Phone Card -->
+          <a href="tel:9342799908" class="glass-card contact-card">
+            <div class="contact-icon-bubble phone-bubble">📱</div>
+            <div class="contact-card-info">
+              <span class="contact-type">Phone</span>
+              <strong class="contact-value">9342799908</strong>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/Akalya9342799908" target="_blank" rel="noopener noreferrer" class="glass-card contact-card">
+            <div class="contact-icon-bubble github-bubble">💻</div>
+            <div class="contact-card-info">
+              <span class="contact-type">GitHub Profile</span>
+              <strong class="contact-value">github.com/Akalya9342799908</strong>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/akalyavetrivel" target="_blank" rel="noopener noreferrer" class="glass-card contact-card">
+            <div class="contact-icon-bubble linkedin-bubble">🔗</div>
+            <div class="contact-card-info">
+              <span class="contact-type">LinkedIn</span>
+              <strong class="contact-value">linkedin.com/in/akalyavetrivel</strong>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+      <div class="footer-container">
+        <p>© 2026 Akalya V. Built with precision, smooth scroll physics &amp; modern web standards.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Interactive Resume Modal -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <div class="modal-header-title">
+          <h3>AKALYA V — RESUME</h3>
+          <span>Final-Year B.Sc. Computer Science Student</span>
+        </div>
+        <button class="modal-close-btn" id="btn-close-resume-modal" aria-label="Close Resume Modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="printable-resume">
+        <!-- Resume Header -->
+        <div class="resume-sheet-header">
+          <h2>AKALYA V</h2>
+          <p class="resume-sheet-role">Aspiring Software Developer | Web Developer</p>
+          <div class="resume-sheet-contacts">
+            <span>📧 akalyav8@gmail.com</span>
+            <span>📱 9342799908</span>
+            <span>💻 github.com/Akalya9342799908</span>
+            <span>🔗 linkedin.com/in/akalyavetrivel</span>
+          </div>
+        </div>
+
+        <hr class="resume-sheet-hr" />
+
+        <!-- Profile Summary -->
+        <div class="resume-sheet-section">
+          <h4 class="sheet-section-title">CAREER OBJECTIVE</h4>
+          <p>
+            Final-year B.Sc. Computer Science student with an academic score of 80%. Passionate about software development, web engineering, and modern AI technologies. Seeking an entry-level position to contribute technical knowledge, collaborative problem-solving skills, and develop high-impact applications.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="resume-sheet-section">
+          <h4 class="sheet-section-title">EDUCATION</h4>
+          <div class="sheet-item">
+            <div class="sheet-item-header">
+              <strong>B.Sc. Computer Science</strong>
+              <span>Graduation: 2026</span>
+            </div>
+            <div class="sheet-item-sub">Sri Amaraavathi College of Arts and Science</div>
+            <div>Academic Score: <strong>80%</strong></div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="resume-sheet-section">
+          <h4 class="sheet-section-title">TECHNICAL &amp; SOFT SKILLS</h4>
+          <p><strong>Languages &amp; Core:</strong> Java (Basics), HTML5, CSS3, JavaScript</p>
+          <p><strong>Tools &amp; Platforms:</strong> Git, GitHub, VS Code, Antigravity, PowerPoint</p>
+          <p><strong>Soft Skills:</strong> Problem Solving, Communication, Teamwork &amp; Collaboration, Time Management</p>
+        </div>
+
+        <!-- Projects -->
+        <div class="resume-sheet-section">
+          <h4 class="sheet-section-title">PROJECTS</h4>
+          <div class="sheet-item">
+            <div class="sheet-item-header">
+              <strong>Poovi Makeup Artist Website</strong>
+              <span>Live on Netlify</span>
+            </div>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+            <p>Built a responsive commercial web application for bridal beauty services, portfolio showcasing, booking inquiry, and client reviews. Hosted live on Netlify (https://poovi-makeup.netlify.app/).</p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="resume-sheet-section">
+          <h4 class="sheet-section-title">CERTIFICATIONS</h4>
+          <ul>
+            <li><strong>Gemini Certified Student</strong> — University Google for Education (August 2026)</li>
+            <li><strong>Intel AI for All (AI Aware &amp; AI Appreciate)</strong> — Intel &amp; Government of India (August 2026)</li>
+            <li><strong>Full Stack Development Certificate</strong></li>
+          </ul>
+        </div>
+
+        <!-- Achievements -->
+        <div class="resume-sheet-section">
+          <h4 class="sheet-section-title">ACHIEVEMENTS &amp; SPORTS</h4>
+          <p><strong>CM Trophy Hockey Tournament — 🏆 Karur District Winner</strong></p>
+          <p>Junior-Level Hockey Tournament; represented Karur District at the district championship level.</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="btn-modal-print">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+          Print / Save PDF
+        </button>
+        <button class="btn btn-outline" id="btn-modal-close-action">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
